@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Renderizador de HTML in-browser</title>
+	</head>
+	<body>
+		<textarea id="editor" placeholder="Digite um código HTML" rows=10 cols=100 onkeyup="renderHTML()"></textarea>
+		<br />
+		<h3>Resultado:</h3>
+		<span id="resultado"></span>
+		<script type="text/javascript">
+			//renderiza o conteudo do HTML digitado na text area
+			function renderHTML(){
+				//pega o elemento do text area
+				var editor = document.getElementById('editor');
+				//pega o elemento span do resultado
+				var res = document.getElementById('resultado');
+				//insere o html dentro do span de resultado
+				res.innerHTML = editor.value;
+			}
+		</script>
+	</body>
+</html>
